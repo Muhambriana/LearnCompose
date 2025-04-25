@@ -9,7 +9,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -26,10 +28,14 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             LearnComposeTheme {
-                Scaffold( modifier = Modifier.fillMaxSize() ) { innerPadding ->
+                Surface(
+                    modifier = Modifier.fillMaxSize(),
+                    color = MaterialTheme.colorScheme.background
+                ) {
                     GreetingText(
                         message = "Happy Birthday Bry!",
                         from = "From Shell",
+                        modifier = Modifier.padding(8.dp)
                     )
                 }
             }
@@ -67,9 +73,15 @@ fun GreetingText(
 @Composable
 fun BirthdayCardPreview() {
     LearnComposeTheme {
-        GreetingText(
-            message = "Happy Birthday Bry!",
-            from = "From Shell"
-        )
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = MaterialTheme.colorScheme.background
+        ) {
+            GreetingText(
+                message = "Happy Birthday Bry!",
+                from = "From Shell",
+                modifier = Modifier.padding(8.dp)
+            )
+        }
     }
 }
