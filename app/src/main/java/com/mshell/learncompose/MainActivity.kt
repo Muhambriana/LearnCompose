@@ -5,7 +5,6 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -19,9 +18,9 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -39,8 +38,8 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     GreetingImage(
-                        message = "Happy Birthday Bry!",
-                        from = "From Shell",
+                        message = stringResource(R.string.happy_birthday_text),
+                        from = stringResource(R.string.signature_text)
                     )
                 }
             }
@@ -69,8 +68,7 @@ fun GreetingText(
             fontSize = 36.sp,
             modifier = Modifier
                 .padding(16.dp)
-                .align(alignment = Alignment.End)
-                .background(color = Color.Blue)
+                .align(alignment = Alignment.CenterHorizontally)
         )
     }
 }
@@ -93,7 +91,9 @@ fun GreetingImage(
         GreetingText(
             message = message,
             from = from,
-            modifier = Modifier.fillMaxSize().padding(8.dp)
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(8.dp)
         )
     }
 }
@@ -103,8 +103,8 @@ fun GreetingImage(
 fun BirthdayCardPreview() {
     LearnComposeTheme {
         GreetingImage(
-            message = "Happy Birthday Bry!",
-            from = "From Shell"
+            message = stringResource(R.string.happy_birthday_text),
+            from = stringResource(R.string.signature_text)
         )
     }
 }
