@@ -84,7 +84,8 @@ fun GreetingImage(
         Image(
             painter = image,
             contentDescription = null,
-            contentScale = ContentScale.Crop
+            contentScale = ContentScale.Crop,
+            alpha = 0.5f
         )
         GreetingText(
             message = message,
