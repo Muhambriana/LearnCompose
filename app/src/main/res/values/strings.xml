@@ -2,4 +2,5 @@
     <string name="app_name">Learn Compose</string>
     <string name="happy_birthday_text">Happy Birthday Bry!</string>
     <string name="signature_text">From Shell</string>
+    <string name="title_activity_article">ArticleActivity</string>
 </resources>
