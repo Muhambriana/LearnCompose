@@ -4,4 +4,7 @@
     <string name="signature_text">From Shell</string>
     <string name="title_activity_article">ArticleActivity</string>
     <string name="title_activity_complete_task">CompleteTaskActivity</string>
+    <string name="title_activity_compose_function_information">
+        ComposeFunctionInformationActivity
+    </string>
 </resources>
