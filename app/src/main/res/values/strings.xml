@@ -3,4 +3,5 @@
     <string name="happy_birthday_text">Happy Birthday Bry!</string>
     <string name="signature_text">From Shell</string>
     <string name="title_activity_article">ArticleActivity</string>
+    <string name="title_activity_complete_task">CompleteTaskActivity</string>
 </resources>
