@@ -28,14 +28,19 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             LearnComposeTheme {
-                Surface(
-                    modifier = Modifier.fillMaxSize(),
-                    color = MaterialTheme.colorScheme.background
-                ) {
-                    Greeting("Android")
-                }
+                MyApp(modifier = Modifier.fillMaxSize())
             }
         }
+    }
+}
+
+@Composable
+fun MyApp(modifier: Modifier = Modifier) {
+    Surface(
+        modifier = modifier,
+        color = MaterialTheme.colorScheme.primary
+    ) {
+        Greeting("Android")
     }
 }
 
@@ -53,6 +58,6 @@ fun Greeting(name: String, modifier: Modifier = Modifier) {
 @Composable
 fun GreetingPreview() {
     LearnComposeTheme {
-        Greeting("Android")
+        MyApp()
     }
 }
