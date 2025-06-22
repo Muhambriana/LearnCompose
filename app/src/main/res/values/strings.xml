@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Learn Compose</string>
+    <string name="show_less">Show less</string>
+    <string name="show_more">Show more</string>
+    <string name="hello">Hello</string>
+    <string name="welcome_to_the_basics_codelab">Welcome to the Basics Codelab!</string>
+    <string name="label_continue">Continue</string>
 </resources>
