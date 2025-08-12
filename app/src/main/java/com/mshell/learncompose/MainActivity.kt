@@ -18,7 +18,6 @@ import com.mshell.learncompose.ui.theme.LearnComposeTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             LearnComposeTheme {
                 Surface(
